@@ -1,0 +1,17 @@
+FUNCTION insertion_sort (arr,n) : INTEGER
+VAR
+i, key, j : INTEGER;
+arr : ARRAY_OF INTEGER;
+n : INTEGER;
+BEGIN
+   FOR i FROM 1 TO n DO
+     key := arr[i];
+     j := i-1;
+     i := i+1;
+       WHILE (j >= 0 and arr[j] > key) DO
+         arr[j + 1] := arr[j];
+         j := j-1;
+       END_WHILE
+     arr[j + 1] := key;
+   END_FOR
+END  
